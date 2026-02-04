@@ -6,6 +6,8 @@ body {
 .header {
     background-color: rgb(42, 42, 45);
     height: 120px;
+    display: flex;
+    justify-content: center;
 }
 
 .main {
@@ -22,4 +24,13 @@ body {
 .footer {
     background-color: rgb(3, 83, 50);
     height: 80px;
+}
+
+.container {
+    max-width: 1440px;
+    margin-left: 160px;
+    margin-right: 160px;
+    height: 120px;
+    width: 100%;
+    border: solid 1px red;
 }
