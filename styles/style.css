@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(1, 0, 64);
+    min-height: 100vh;
+}
+
+.header {
+    background-color: rgb(42, 42, 45);
+    height: 120px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg,rgb(1, 0, 64), rgb(42, 42, 45));
+    background-repeat: no-repeat;
+    min-height: 250px;
+    width: 100%;
+}
