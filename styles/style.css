@@ -12,8 +12,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(0deg,rgb(1, 0, 64), rgb(42, 42, 45));
+    background: linear-gradient(0deg,rgb(15, 163, 196), rgb(42, 42, 45));
     background-repeat: no-repeat;
     min-height: 250px;
     width: 100%;
+    height: calc(100vh - 200px);
+}
+
+.footer {
+    background-color: rgb(3, 83, 50);
+    height: 80px;
 }
