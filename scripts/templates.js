@@ -12,13 +12,15 @@ function loadPokemons(i) {
 function loadPokemonInfo(i) {
     return `
         <div class="infoCard">
-            <button class="back-btn" onclick="renderPokemons()">Back</button>
-
             <div class="image-shortInfo">
                 <img class="pokemon-main-image"
                      src="${pokemonDatas[i].sprites.other.home.front_default}">
                 <div class="short-info">
                     <h2>${pokemonDatas[i].name}</h2>
+                    <p>Base Experience: ${pokemonDatas[i].base_experience}</p>
+                    <p>Height: ${pokemonDatas[i].height}</p>
+                    <p>Weight: ${pokemonDatas[i].weight}</p>
+                    <button class="back-btn" onclick="renderPokemons()">Back</button>
                 </div>
             </div>
         </div>

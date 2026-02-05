@@ -1,8 +1,10 @@
 .infoCard {
     width: 100%;
     height: 100%;
+    color: white;
 }
 
 .image-shortInfo {
     display: flex;
+    justify-content: space-around;
 }
