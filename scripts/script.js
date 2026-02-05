@@ -76,7 +76,7 @@ function renderFilteredPokemons(list) {
     mainRef.innerHTML = "";
 
     if (list.length === 0) {
-        mainRef.innerHTML = "<p>No Pokémon found 😒</p>";
+        mainRef.innerHTML = `<p>No Pokémon found 😒<button onclick="renderPokemons()">Back to Overview</button></p>`;
         return;
     }
 

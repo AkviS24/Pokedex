@@ -12,7 +12,7 @@ function loadPokemons(i) {
 function loadPokemonInfo(i) {
     return `
         <div class="infoCard">
-            <button class="back-btn" onclick="init()">Back</button>
+            <button class="back-btn" onclick="renderPokemons()">Back</button>
 
             <div class="image-shortInfo">
                 <img class="pokemon-main-image"
