@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,11 @@
     <link rel="icon" href="./assets/icons/pokemon-icon.png">
     <link rel="stylesheet" href="./styles/basic.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/templates.css">
     <script src="./scripts/templates.js" defer></script>
     <script src="./scripts/script.js" defer></script>
 </head>
+
 <body onload="init()">
     <header class="header">
         <div class="container header-container">
@@ -18,7 +21,9 @@
             </div>
             <div class="head-search-area">
                 <input type="text" id="search" placeholder="Search for your Pokemon">
-                <button type="button" class="btn" onclick="search()">Search</button>
+                <button id="search-btn" type="button" class="btn" onclick="search()" disabled>
+                    Search
+                </button>
             </div>
         </div>
     </header>
@@ -30,7 +35,10 @@
     </main>
 
     <footer class="footer">
-
+        <div class="container footer-container">
+            <button id="footer-button" onclick="loadMorePokemons()">Get 20 more Pokemons</button>
+        </div>
     </footer>
 </body>
+
 </html>

@@ -1,5 +1,7 @@
 const inputRef = document.getElementById("search");
+const searchBtnRef = document.getElementById("search-btn");
 const mainRef = document.getElementById("main-container");
+const footerBtnRef = document.getElementById("footer-button");
 
 
 const pokemons = [];
@@ -8,31 +10,44 @@ let offset = 0;
 
 
 function init() {
-    
-    getPokemons();
+    pokemonDatas.length = 0;
+    offset = 0;
+    mainRef.innerHTML = "";
+    loadMorePokemons();
 }
 
-async function getPokemons() {
+async function loadMorePokemons() {
+    footerBtnRef.disabled = true;
+    footerBtnRef.innerText = "Loading...";
+
     loadAnimation();
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=${offset}`);
+
+    const response = await fetch(
+        `https://pokeapi.co/api/v2/pokemon?limit=20&offset=${offset}`
+    );
     const responseAsJson = await response.json();
-    pokemons.push(responseAsJson);
-    for(let i = 0; i < pokemons[0].results.length; i++){
-        const response = await fetch(pokemons[0].results[0].url);
-        const responseAsJson = await response.json();
-        pokemonDatas.push(responseAsJson);
+
+    for (let i = 0; i < responseAsJson.results.length; i++) {
+        const pokemonResponse = await fetch(responseAsJson.results[i].url);
+        const pokemonJson = await pokemonResponse.json();
+        pokemonDatas.push(pokemonJson);
     }
- 
-    mainRef.innerHTML = "";
-    loadAnimation();
-   
+
+    offset += 20;
     renderPokemons();
+
+    footerBtnRef.disabled = false;
+    footerBtnRef.innerText = "Get 20 more Pokemons";
 }
 
 function renderPokemons() {
     mainRef.innerHTML = "";
-    for(let i = 0; i < pokemonDatas.length; i++) {
-        console.log(pokemonDatas[i].sprites.other.home.front_default);
+    for (let i = 0; i < pokemonDatas.length; i++) {
         mainRef.innerHTML += loadPokemons(i);
     }
+}
+
+function getPokemonInfo(i) {
+    mainRef.innerHTML = "";
+    mainRef.innerHTML = loadPokemonInfo(i);
 }

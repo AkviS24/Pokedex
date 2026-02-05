@@ -97,6 +97,8 @@ body {
     border: solid 1px white;
 }
 
+
+
 @keyframes rotate-clockwise {
     from {
         transform: rotate(0deg);
