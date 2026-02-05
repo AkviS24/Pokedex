@@ -47,7 +47,7 @@ body {
     height: 120px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(90deg,rgb(15, 163, 196) 1%, rgb(42, 42, 45)20%)
+    background: linear-gradient(48deg,rgb(15, 163, 196) 1%, rgb(42, 42, 45)20%);
 }
 
 #header-animation {
@@ -75,6 +75,22 @@ body {
     border: solid 1px black;
     height: 450px;
     width: 100%;
+}
+
+.loading {
+    height: 150px;
+    width: auto;
+
+    animation: rotate-clockwise 4s linear infinite;
+}
+
+@keyframes rotate-clockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes move-pokemon {
