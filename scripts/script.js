@@ -1,5 +1,9 @@
-const inputRef = document.getElementById("search");
 const searchBtnRef = document.getElementById("search-btn");
+const inputRef = document.getElementById("search");
+inputRef.addEventListener("input", () => {
+    const value = inputRef.value.trim();
+    searchBtnRef.disabled = value.length < 3;
+});
 const mainRef = document.getElementById("main-container");
 const footerBtnRef = document.getElementById("footer-button");
 
@@ -50,4 +54,30 @@ function renderPokemons() {
 function getPokemonInfo(i) {
     mainRef.innerHTML = "";
     mainRef.innerHTML = loadPokemonInfo(i);
+}
+
+function search() {
+    const searchValue = inputRef.value.trim().toLowerCase();
+
+    if (searchValue.length < 3) return;
+
+    const filteredPokemons = pokemonDatas.filter(pokemon =>
+        pokemon.name.includes(searchValue)
+    );
+
+    renderFilteredPokemons(filteredPokemons);
+}
+
+function renderFilteredPokemons(list) {
+    mainRef.innerHTML = "";
+
+    if (list.length === 0) {
+        mainRef.innerHTML = "<p>No Pokémon found 😢</p>";
+        return;
+    }
+
+    for (let i = 0; i < list.length; i++) {
+        const originalIndex = pokemonDatas.indexOf(list[i]);
+        mainRef.innerHTML += loadPokemons(originalIndex);
+    }
 }
