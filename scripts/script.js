@@ -3,6 +3,10 @@ const inputRef = document.getElementById("search");
 inputRef.addEventListener("input", () => {
     const value = inputRef.value.trim();
     searchBtnRef.disabled = value.length < 3;
+
+    if (value.length === 0) {
+        renderPokemons();
+    }
 });
 const mainRef = document.getElementById("main-container");
 const footerBtnRef = document.getElementById("footer-button");
@@ -72,7 +76,7 @@ function renderFilteredPokemons(list) {
     mainRef.innerHTML = "";
 
     if (list.length === 0) {
-        mainRef.innerHTML = "<p>No Pokémon found 😢</p>";
+        mainRef.innerHTML = "<p>No Pokémon found 😒</p>";
         return;
     }
 
