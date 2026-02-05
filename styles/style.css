@@ -75,6 +75,7 @@ body {
     border: solid 1px black;
     height: 450px;
     width: 100%;
+    overflow-y: scroll;
 }
 
 .loading {
@@ -82,6 +83,18 @@ body {
     width: auto;
 
     animation: rotate-clockwise 4s linear infinite;
+}
+
+.pokemon-main-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.pokemon-main-image:hover {
+    background-color: rgb(8, 152, 155);
+    border: solid 1px white;
 }
 
 @keyframes rotate-clockwise {
