@@ -12,7 +12,7 @@ const mainRef = document.getElementById("main-container");
 const footerBtnRef = document.getElementById("footer-button");
 
 
-const pokemons = [];
+
 const pokemonDatas = [];
 let offset = 0;
 

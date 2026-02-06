@@ -13,8 +13,7 @@ function loadPokemonInfo(i) {
     return `
         <div class="infoCard">
             <div class="image-shortInfo">
-                <img class="pokemon-main-image"
-                     src="${pokemonDatas[i].sprites.other.home.front_default}">
+                <img class="pokemon-main-image" src="${pokemonDatas[i].sprites.other.home.front_default}">
                 <div class="short-info">
                     <h2>${pokemonDatas[i].name}</h2>
                     <p>Base Experience: ${pokemonDatas[i].base_experience}</p>
