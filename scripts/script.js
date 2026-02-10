@@ -85,3 +85,9 @@ function renderFilteredPokemons(list) {
         mainRef.innerHTML += loadPokemons(originalIndex);
     }
 }
+
+function getPokemonTypes(i) {
+    for(let index = 0; index < pokemonDatas[i].types.length; index++) {
+        return pokemonDatas[i].types[index].type.name; 
+    }
+}
