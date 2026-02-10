@@ -22,8 +22,8 @@ function loadPokemonInfo(i) {
                     <p>Base Experience: ${pokemonDatas[i].base_experience}</p>
                     <p>Height: ${pokemonDatas[i].height}</p>
                     <p>Weight: ${pokemonDatas[i].weight}</p>
-                    <p>Type: ${getPokemonTypes(i)}</p>
-                    <button class="back-btn" onclick="renderPokemons()">Back</button>
+                    <p>Type: ${getPokemonTypes(i)}</p><br>
+                    <button style="width: 100%" class="back-btn button" onclick="renderPokemons()">Back</button>
                 </div>
             </div>
         </div>

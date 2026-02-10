@@ -6,7 +6,14 @@
 
 .image-shortInfo {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
+}
+
+.short-info {
+    background-color: rgba(0, 0, 0, 0.623);
+    padding: 8px;
 }
 
 .dis-flex-col {
@@ -124,6 +131,21 @@
 
 .ground {
     background: url("../assets/img/normal.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+}
+
+.rock {
+    background: url("../assets/img/colorless.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+}
+
+
+.ghost {
+    background: url("../assets/img/metal.png");
     background-repeat: no-repeat;
     background-position: center;
     object-fit: cover;
