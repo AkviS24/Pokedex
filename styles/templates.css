@@ -18,5 +18,13 @@
 }
 
 .grass {
-    background-color: rgb(165, 241, 51);
+    background: url("../assets/img/grass.png");
+    background-position: center;
+    object-fit: cover;
+}
+
+.fire {
+    background: url("../assets/img/fire.png");
+    background-position: center;
+    object-fit: cover;
 }
