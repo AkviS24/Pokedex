@@ -5,7 +5,10 @@ function loadAnimation() {
 
 function loadPokemons(i) {
     return `
-        <img class="pokemon-main-image" onclick="getPokemonInfo(${i})" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${i + 1}.png">
+        <div class="dis-flex-col">
+            <img class="pokemon-main-image" onclick="getPokemonInfo(${i})" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${i + 1}.png">
+            ${pokemonDatas[i].name}
+        </div>
     `;
 }
 
