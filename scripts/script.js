@@ -11,6 +11,8 @@ inputRef.addEventListener("input", () => {
 const mainRef = document.getElementById("main-container");
 const footerBtnRef = document.getElementById("footer-button");
 
+let currentPokemonIndex = 0;
+
 
 
 const pokemonDatas = [];
@@ -89,5 +91,24 @@ function renderFilteredPokemons(list) {
 function getPokemonTypes(i) {
     for(let index = 0; index < pokemonDatas[i].types.length; index++) {
         return pokemonDatas[i].types[index].type.name; 
+    }
+}
+
+function showPokemonInfo(i) {
+    currentPokemonIndex = i;
+    mainRef.innerHTML = loadPokemonInfo(i);
+}
+
+function showNextPokemon() {
+    if (currentPokemonIndex < pokemonDatas.length - 1) {
+        currentPokemonIndex++;
+        showPokemonInfo(currentPokemonIndex);
+    }
+}
+
+function showPreviousPokemon() {
+    if (currentPokemonIndex > 0) {
+        currentPokemonIndex--;
+        showPokemonInfo(currentPokemonIndex);
     }
 }
