@@ -58,3 +58,57 @@
     background-position: center;
     object-fit: cover;
 }
+
+.metal {
+    background: url("../assets/img/metal.png");
+    background-position: center;
+    object-fit: cover;
+}
+
+.fighting {
+    background: url("../assets/img/fighting.png");
+    background-position: center;
+    object-fit: cover;
+}
+
+.colorless {
+    background: url("../assets/img/colorless.png");
+    background-position: center;
+    object-fit: cover;
+}
+
+.bug {
+    background: url("../assets/img/colorless.png");
+    background-position: center;
+    object-fit: cover;
+}
+
+.psychic {
+    background: url("../assets/img/colorless.png");
+    background-position: center;
+    object-fit: cover;
+}
+
+.dark {
+    background: url("../assets/img/metal.png");
+    background-position: center;
+    object-fit: cover;
+}
+
+.fairy {
+    background: url("../assets/img/metal.png");
+    background-position: center;
+    object-fit: cover;
+}
+
+.dragon {
+    background: url("../assets/img/metal.png");
+    background-position: center;
+    object-fit: cover;
+}
+
+.ground {
+    background: url("../assets/img/normal.png");
+    background-position: center;
+    object-fit: cover;
+}
