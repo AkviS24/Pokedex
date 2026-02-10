@@ -28,3 +28,33 @@
     background-position: center;
     object-fit: cover;
 }
+
+.electric {
+    background: url("../assets/img/electric.png");
+    background-position: center;
+    object-fit: cover;
+}
+
+.ice {
+    background: url("../assets/img/ice.png");
+    background-position: center;
+    object-fit: cover;
+}
+
+.normal {
+    background: url("../assets/img/normal.png");
+    background-position: center;
+    object-fit: cover;
+}
+
+.poison {
+    background: url("../assets/img/poison.png");
+    background-position: center;
+    object-fit: cover;
+}
+
+.water {
+    background: url("../assets/img/water.png");
+    background-position: center;
+    object-fit: cover;
+}
