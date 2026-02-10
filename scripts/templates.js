@@ -15,7 +15,7 @@ function loadPokemons(i) {
 function loadPokemonInfo(i) {
     return `
         <div class="infoCard">
-            <div class="image-shortInfo">
+            <div class="image-shortInfo ${pokemonDatas[i].types[0].type.name}">
                 <img class="pokemon-main-image" src="${pokemonDatas[i].sprites.other.home.front_default}">
                 <div class="short-info">
                     <h2>${pokemonDatas[i].name}</h2>
