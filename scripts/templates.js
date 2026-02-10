@@ -5,7 +5,7 @@ function loadAnimation() {
 
 function loadPokemons(i) {
     return `
-        <div class="dis-flex-col">
+        <div class="dis-flex-col ${pokemonDatas[i].types[0].type.name}">
             <img class="pokemon-main-image" onclick="getPokemonInfo(${i})" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${i + 1}.png">
             ${pokemonDatas[i].name}
         </div>
