@@ -22,6 +22,7 @@ function loadPokemonInfo(i) {
                     <p>Base Experience: ${pokemonDatas[i].base_experience}</p>
                     <p>Height: ${pokemonDatas[i].height}</p>
                     <p>Weight: ${pokemonDatas[i].weight}</p>
+                    <p>HP: ${pokemonDatas[i].stats[0].base_stat}</p>
                     <p>Type: ${getPokemonTypes(i)}</p><br>
                     <div class="nav-buttons">
                         <button class="button" onclick="showPreviousPokemon()">⬅️ Previous</button>
