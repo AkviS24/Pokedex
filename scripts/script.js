@@ -7,6 +7,8 @@ inputRef.addEventListener("input", () => {
     if (value.length >= 3) {
         search(value);
     }else {
+        isSearchActive = false;
+        lastSearchResults = [];
         renderPokemons();
     }
 });
@@ -14,6 +16,8 @@ const mainRef = document.getElementById("main-container");
 const footerBtnRef = document.getElementById("footer-button");
 
 let currentPokemonIndex = 0;
+let isSearchActive = false;
+let lastSearchResults = [];
 
 
 
@@ -66,6 +70,8 @@ function getPokemonInfo(i) {
 
 function search(searchValue) {
     const filteredPokemons = pokemonDatas.filter(pokemon =>pokemon.name.includes(searchValue));
+    isSearchActive = true;
+    lastSearchResults = filteredPokemons;
     renderFilteredPokemons(filteredPokemons);
 }
 
@@ -108,5 +114,13 @@ function showPreviousPokemon() {
     if (currentPokemonIndex > 0) {
         currentPokemonIndex--;
         showPokemonInfo(currentPokemonIndex);
+    }
+}
+
+function goBack() {
+    if (isSearchActive) {
+        renderFilteredPokemons(lastSearchResults);
+    } else {
+        renderPokemons();
     }
 }

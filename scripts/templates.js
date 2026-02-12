@@ -28,7 +28,7 @@ function loadPokemonInfo(i) {
                         <button class="button" onclick="showPreviousPokemon()">⬅️ Previous</button>
                         <button class="button" onclick="showNextPokemon()">Next ➡️</button>
                     </div>
-                    <button style="width: 100%" class="back-btn button" onclick="renderPokemons()">Back</button>
+                    <button style="width: 100%" class="back-btn button" onclick="goBack()">Back</button>
                 </div>
             </div>
         </div>
