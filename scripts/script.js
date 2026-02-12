@@ -64,12 +64,8 @@ function getPokemonInfo(i) {
     mainRef.innerHTML = loadPokemonInfo(i);
 }
 
-function search() {
-    const searchValue = inputRef.value.trim().toLowerCase();
-    if (searchValue.length < 3) return;
-    const filteredPokemons = pokemonDatas.filter(pokemon =>
-        pokemon.name.includes(searchValue)
-    );
+function search(searchValue) {
+    const filteredPokemons = pokemonDatas.filter(pokemon =>pokemon.name.includes(searchValue));
     renderFilteredPokemons(filteredPokemons);
 }
 
