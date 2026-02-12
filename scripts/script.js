@@ -1,10 +1,12 @@
 const searchBtnRef = document.getElementById("search-btn");
 const inputRef = document.getElementById("search");
 inputRef.addEventListener("input", () => {
-    const value = inputRef.value.trim();
+    const value = inputRef.value.trim().toLowerCase();
     searchBtnRef.disabled = value.length < 3;
 
-    if (value.length === 0) {
+    if (value.length >= 3) {
+        search(value);
+    }else {
         renderPokemons();
     }
 });
@@ -64,24 +66,19 @@ function getPokemonInfo(i) {
 
 function search() {
     const searchValue = inputRef.value.trim().toLowerCase();
-
     if (searchValue.length < 3) return;
-
     const filteredPokemons = pokemonDatas.filter(pokemon =>
         pokemon.name.includes(searchValue)
     );
-
     renderFilteredPokemons(filteredPokemons);
 }
 
 function renderFilteredPokemons(list) {
     mainRef.innerHTML = "";
-
     if (list.length === 0) {
         mainRef.innerHTML = `<p>No Pokémon found 😒<button onclick="renderPokemons()">Back to Overview</button></p>`;
         return;
     }
-
     for (let i = 0; i < list.length; i++) {
         const originalIndex = pokemonDatas.indexOf(list[i]);
         mainRef.innerHTML += loadPokemons(originalIndex);
