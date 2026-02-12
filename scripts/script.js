@@ -90,7 +90,12 @@ function renderFilteredPokemons(list) {
 
 function getPokemonTypes(i) {
     for(let index = 0; index < pokemonDatas[i].types.length; index++) {
-        return pokemonDatas[i].types[index].type.name; 
+        let firstType = pokemonDatas[i].types[index].type.name;
+        let secondType = "";
+        if(pokemonDatas[i].types.length>1) {
+            secondType = pokemonDatas[i].types[1].type.name;
+        }
+        return  firstType + " " + secondType;
     }
 }
 
