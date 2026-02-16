@@ -14,6 +14,7 @@ inputRef.addEventListener("input", () => {
 });
 const mainRef = document.getElementById("main-container");
 const footerBtnRef = document.getElementById("footer-button");
+const dialogRef = document.getElementById("pokemonInfoDialog");
 
 let currentPokemonIndex = 0;
 let isSearchActive = false;
@@ -64,8 +65,9 @@ function renderPokemons() {
 }
 
 function getPokemonInfo(i) {
-    mainRef.innerHTML = "";
-    mainRef.innerHTML = loadPokemonInfo(i);
+    dialogRef.innerHTML = "";
+    dialogRef.innerHTML = loadPokemonInfo(i);
+    dialogOpen("pokemonInfoDialog");
 }
 
 function search(searchValue) {
@@ -100,7 +102,7 @@ function getPokemonTypes(i) {
 
 function showPokemonInfo(i) {
     currentPokemonIndex = i;
-    mainRef.innerHTML = loadPokemonInfo(i);
+    dialogRef.innerHTML = loadPokemonInfo(i);
 }
 
 function showNextPokemon() {

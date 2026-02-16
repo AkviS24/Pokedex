@@ -4,6 +4,6 @@ function dialogOpen(dialogID) {
 }
 
 function dialogClose(dialogId) {
-    document.getElementById(dialogID).classList.remove('visible');
+    document.getElementById(dialogId).classList.remove('visible');
     document.getElementById("body-overlay").classList.remove('visible');
 }
